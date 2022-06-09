@@ -1,0 +1,66 @@
+.board {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+img {
+    max-width: 190px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 29vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.top-card {
+    cursor: pointer;
+    transition: all 250ms ease;
+
+    &:hover {
+        transform: scale(1.11) translateY(-10px);
+    }
+}
+
+.pick-card {
+    transition: all 250ms ease;
+    transform: scale(1.3) !important;
+    animation: pick-card-animation 1s ease;
+    transform: scale(1) translateX(400px) translateY(200px) rotate(-10deg) !important;
+}
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.7);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    
+    100% {
+        transform: scale(1) translateX(400px) translateY(200px) rotate(-10deg);
+    }
+}
+
+.played-card {
+    transform: scale(1) translateX(400px) translateY(200px) rotate(-10deg) !important;
+}
+
+.player-position{
+    position: absolute;
+    right: 0;
+}
+
+.btn-add {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
