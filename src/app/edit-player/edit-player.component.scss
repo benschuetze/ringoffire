@@ -1,0 +1,12 @@
+.profile-picture {
+    height: 60px;
+    width: 60px;
+    
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        background-color: lightgrey;
+    }
+}

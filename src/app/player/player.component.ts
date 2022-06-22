@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-@Input() name; //  wird aus game html übergeben
+@Input() name: string; //  wird aus game html übergeben
 @Input() playerActive: boolean = false; //  wird aus game html übergeben
 
   constructor() { }

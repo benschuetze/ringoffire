@@ -4,4 +4,9 @@
     left: 100px;
     right: 100px;
     transition: all 250ms ease;
+
+    @media (max-width: 650px) {
+        left: 16px;
+        right: 84px;
+    }
 }

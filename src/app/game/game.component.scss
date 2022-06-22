@@ -59,8 +59,16 @@ img {
     right: 0;
 }
 
+.position {
+    position: absolute;
+}
+
 .btn-add {
     position: absolute;
     right: 32px;
     bottom: 32px;
+
+    @media(max-width: 650px) {
+        right: 16px;
+    }
 }

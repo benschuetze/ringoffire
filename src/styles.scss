@@ -3,7 +3,48 @@ body {
     background-color: #3e603f;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#wrapper {
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.mobile-players {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    max-height: 200px;
+}
+
+@media all and(min-width: 720px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .hide-desktop {
+        display: none;
+    }
+}

@@ -3,6 +3,8 @@ export class Game {
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
+    public pickCardAnimation = false;
+    public currentCrad: string = '';
 
     constructor() { // funktion die immer beim erstellen des objekts ausgeführt wird
         
@@ -13,8 +15,19 @@ export class Game {
             this.stack.push('diamonds_' + i);
         }
         
-        shuffle(this.stack);
+        shuffle(this.stack);      
 
+    }
+
+    public toJSON() {
+        return {
+            players: this.players,
+            stack: this.stack,
+            playedCards: this.playedCards,
+            currentPlayer: this.currentPlayer,
+            pickCardAnimation : this.pickCardAnimation,
+            currentCrad : this.currentCrad
+        }
     }
 }
 

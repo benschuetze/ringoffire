@@ -40,7 +40,7 @@ export class GameInfoComponent implements OnInit, OnChanges {
       this.description = this.cardAction[cardNumber - 1].description;
     } else {
       this.title = 'Have Fun!';
-      this.description = "Don't drink and drive :)";
+      this.description = "Pick a card. Don't drink and drive :)";
     }
   }
 
