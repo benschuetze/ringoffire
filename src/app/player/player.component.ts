@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PlayerComponent implements OnInit {
 @Input() name: string; //  wird aus game html übergeben
 @Input() playerActive: boolean = false; //  wird aus game html übergeben
+@Input() profilePic = '1.webp';
 
   constructor() { }
 

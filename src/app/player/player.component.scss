@@ -9,6 +9,7 @@
     margin-bottom: 24px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: fade-in 300ms ease-in-out;
+    overflow: hidden;
     cursor: pointer;
 
     @keyframes fade-in {
@@ -22,14 +23,17 @@
     }
 
     img {
-        height: 50px;
+        height: 40px;
         object-fit: cover;
         border-radius: 100%;
     }
 
     span {
-        font-size: 24px;
+        font-size: 20px;
         margin-left: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &:hover {

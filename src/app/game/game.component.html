@@ -1,5 +1,11 @@
 <div id="wrapper">
-    <div class="board">
+    <div *ngIf="gameOver" class="game-over">Game over!
+        <button *ngIf="gameOver" (click)="restart()">
+            Restart
+        </button>
+    </div>
+
+    <div *ngIf="!gameOver" class="board">
         <!--Card stack-->
         <img *ngFor="let card of [1,2,3,4]; let i = index;" [ngStyle]="{'right.px': i * 5}"
             src="/assets/img/cards/card_cover.png">
@@ -16,17 +22,19 @@
 
     </div>
 
-    <app-player (click)="editPlayer(i)" *ngFor="let player of game.players; let i = index;" [name]="player" class="player-position hide-desktop"
-        [playerActive]="i == game.currentPlayer" [ngStyle]="{'top.px': (i+1) * 80}"></app-player>
+    <app-player (click)="editPlayer(i)" *ngFor="let player of game.players; let i = index;" [name]="player"
+        class="player-position hide-desktop" [playerActive]="i == game.currentPlayer"
+        [profilePic]="game.playerImages[i]" [ngStyle]="{'top.px': (i+0.2) * 60}"></app-player>
 
     <div class="mobile-players">
-        <app-player-mobile (click)="editPlayer(i)" *ngFor="let player of game.players; let i = index;" [name]="player" class="hide-mobile"
-            [playerActive]="i == game.currentPlayer"></app-player-mobile>
+        <app-player-mobile (click)="editPlayer(i)" *ngFor="let player of game.players; let i = index;" [name]="player"
+            class="hide-mobile" [playerActive]="i == game.currentPlayer" [profilePic]="game.playerImages[i]">
+        </app-player-mobile>
     </div>
 
-    <app-game-info [card]="game.currentCrad"></app-game-info>
+    <app-game-info *ngIf="!gameOver" [card]="game.currentCrad"></app-game-info>
 
-    <button (click)="openDialog()" mat-fab color="primary" class="btn-add">
+    <button *ngIf="!gameOver" (click)="openDialog()" mat-fab color="primary" class="btn-add">
         <mat-icon>add</mat-icon>
     </button>
 </div>

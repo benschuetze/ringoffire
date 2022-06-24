@@ -15,6 +15,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: fade-in 300ms ease-in-out;
     cursor: pointer;
+    overflow: hidden;
 
     @keyframes fade-in {
         from {
@@ -36,6 +37,9 @@
         font-size: 16px;
         font-weight: 100;
         margin: 0 auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &:hover {

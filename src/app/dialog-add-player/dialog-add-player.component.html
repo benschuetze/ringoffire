@@ -6,7 +6,6 @@
     <input matInput [(ngModel)]="name"> <!-- wert des eingabefelds wird an name gebunden -->
   </mat-form-field>
 </div>
-<p>What does your friend look like?</p>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>

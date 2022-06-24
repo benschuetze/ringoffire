@@ -8,14 +8,6 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 })
 export class DialogAddPlayerComponent implements OnInit {
   name: string = '';
-  profilePics = [
-    '/assets/img/profile/1.webp',
-    '/assets/img/profile/2.png',
-    '/assets/img/profile/monkey.png',
-    '/assets/img/profile/pinguin.svg',
-    '/assets/img/profile/serious-woman.svg',
-    '/assets/img/profile/winkboy.svg'
-  ];
   constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>) { }
   
 
@@ -24,6 +16,10 @@ export class DialogAddPlayerComponent implements OnInit {
 
   onNoClick() {
     this.dialogRef.close();
+  }
+
+  setImage(image) {
+
   }
 
   selectImage(selectedImage) {
